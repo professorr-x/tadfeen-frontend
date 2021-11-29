@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
+import Form from './components/Form'
+import Navbar from './components/NavBar';
+import Home from './components/Home';
+import SignIn from './components/SignIn';;
 
-function App() {
+// import PlaceToVisit from './components/userActions';
+
+
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+       < Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />}/>
+        <Route path="/signin" exact element={<SignIn />}/>
+        <Route path="/sign-up" exact element={< Form />}/>
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
