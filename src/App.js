@@ -23,7 +23,7 @@ export default function App() {
        < Navbar />
       <Routes>
         <Route path="/" exact element={<Home />}/>
-        <Route path="/signin" exact element={<SignIn />}/>
+        <Route path="/sign-in" exact element={< SignIn />}/>
         <Route path="/sign-up" exact element={< Form />}/>
       </Routes>
     </Router>
