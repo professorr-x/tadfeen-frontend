@@ -30,6 +30,7 @@ async function loginUser(credentials) {
 const SignInForm = ({ setToken }) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [x, setX] = useState();
   const classes = useStyles();
 
   const handleSubmit = async (e) => {
@@ -39,6 +40,7 @@ const SignInForm = ({ setToken }) => {
       password: password,
     });
     setToken(token);
+    setX(1);
     
   };
   return (
