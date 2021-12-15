@@ -27,10 +27,10 @@ async function loginUser(credentials) {
     .then((response) => response.json())
 }
 
-const SignInForm = ({ setToken }) => {
+const SignInForm = ({setToken}) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const [x, setX] = useState();
+  const [errorMsg, setErrorMsg] = useState();
   const classes = useStyles();
 
   const handleSubmit = async (e) => {
@@ -39,9 +39,12 @@ const SignInForm = ({ setToken }) => {
       username: username,
       password: password,
     });
-    setToken(token);
-    setX(1);
-    
+
+    if (token.error){
+      setErrorMsg(token.error);
+    } else {
+      setToken(token)
+    }
   };
   return (
     <div className={classes.root} id="header">
@@ -67,9 +70,10 @@ const SignInForm = ({ setToken }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+        <span className="form-error-msg"> {errorMsg} </span>
         <input className="form-input-btn" type="submit" value="Login" />
         <span className="form-input-login">
-          Don't have an account? Register <a href="#">here</a>
+          Don't have an account? Register <a href="/sign-up">here</a>
         </span>
       </form>
     </div>

@@ -9,6 +9,10 @@
   text-align: center; */
 }
 
+.form-error-msg{
+  color: #fff;
+}
+
 .close-btn {
   position: absolute;
   top: 2%;
