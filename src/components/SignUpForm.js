@@ -1,15 +1,63 @@
 import React from 'react';
 import validate from './validateInfo';
-import useForm from './useForm';
+// import useForm from './useForm';
 import './Form.css';
+import { useState } from "react";
+
+async function registerUser(credentials) {
+  const requestOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  };
+
+  return fetch("http://127.0.0.1:8010/api/register/", requestOptions).then(
+    (response) => response.json()
+  );
+}
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors, token} = useForm(
-    submitForm,
-    validate
-  );
+  // const { handleChange, handleSubmit, values, errors} = useForm(
+  //   submitForm,
+  //   validate
+  // );
+  
+  // const useForm = (callback, validate) => {
+  const [values, setValues] = useState({
+    username: "",
+    email: "",
+    password: "",
+    password1: "",
+  });
+  
 
-  // setRegistrationToken(handleSubmit);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  };
+
+
+  const [errors, setErrors] = useState({});
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // let token = ''
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response = await registerUser(values);
+    setErrors(validate(values));
+
+    if (response.token) {
+      submitForm()
+    } else if (response.username.includes('A user with that username already exists.')) {
+    setErrors({username : "A user with that username already exists."})
+    }
+  };
 
   return (
     <div className='form-content-right'>
