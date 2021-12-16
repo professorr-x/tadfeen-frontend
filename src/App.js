@@ -20,7 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/sign-in" exact element={<SignIn setToken={setToken} />} />
-          <Route path="/sign-up" exact element={<Form />} />
+          <Route path="/sign-up" exact element={<Form setToken={setToken} />} />
           <Route path="/my-account" exact element={<SignIn setToken={setToken} />} />
         </Routes>
       </Router>

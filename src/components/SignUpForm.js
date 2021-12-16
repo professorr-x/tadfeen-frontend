@@ -4,10 +4,12 @@ import useForm from './useForm';
 import './Form.css';
 
 const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors, token} = useForm(
     submitForm,
     validate
   );
+
+  // setRegistrationToken(handleSubmit);
 
   return (
     <div className='form-content-right'>
@@ -57,9 +59,9 @@ const FormSignup = ({ submitForm }) => {
           <input
             className='form-input'
             type='password'
-            name='password2'
+            name='password1'
             placeholder='Confirm your password'
-            value={values.password2}
+            value={values.password1}
             onChange={handleChange}
           />
           {errors.password2 && <p>{errors.password2}</p>}

@@ -3,11 +3,12 @@ import './Form.css';
 import FormSignup from './SignUpForm';
 // import FormSuccess from './FormSuccess';
 
-const Form = () => {
+const Form = ({setToken}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
     setIsSubmitted(true);
+    setToken({Token : true})
   }
   return (
     <>
