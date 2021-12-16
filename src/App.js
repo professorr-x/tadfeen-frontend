@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar";
 import TokenNavbar from "./components/TokenNavBar";
 import Home from "./components/Home";
 import SignIn from "./components/SignIn";
+import Dashborad from "./pages/Dashboard";
 
 // TOKEN NAV
 //  Home about contact myaccount
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/sign-in" exact element={<Home />} />
         <Route path="/sign-up" exact element={<Home />} />
+        <Route path="/my-account" exact element={<Dashborad />} />
       </Routes>
     </Router>
   );
