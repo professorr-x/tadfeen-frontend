@@ -9,7 +9,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.4",
     "@material/typography": "^13.0.0",
-    "@mui/icons-material": "^5.1.1",
+    "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.1.1",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",

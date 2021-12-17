@@ -1,11 +1,23 @@
 import React from "react";
+import SideBar from "../components/Sidenav/SideBar";
+import './dashboard.css'
+
 
 
 const Dashborad = () => {
   
 
   return (
-      <h1>Dashboard</h1>
+      <div id="body">
+          {/* <div>
+            <h1 className="logo-title">
+                Tad<span className="color-text">Feen.</span>
+            </h1>
+          </div> */}
+        <SideBar/>
+      </div>
+      
+
   )
 }
 
