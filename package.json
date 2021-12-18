@@ -11,6 +11,8 @@
     "@material/typography": "^13.0.0",
     "@mui/icons-material": "^5.2.4",
     "@mui/material": "^5.1.1",
+    "@mui/styles": "^5.2.3",
+    "@mui/x-data-grid": "^5.2.1",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -20,6 +22,7 @@
     "react-router-dom": "^6.0.2",
     "react-scripts": "^3.4.4",
     "react-scroll": "^1.8.4",
+    "rsuite": "^5.4.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },

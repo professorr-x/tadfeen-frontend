@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Form from "./components/Form";
 import Navbar from "./components/NavBar";
 import TokenNavbar from "./components/TokenNavBar";
@@ -14,28 +14,28 @@ import Dashborad from "./pages/Dashboard";
 
 export default function App() {
   const [token, setToken] = useState();
-  if (!token) {
-    return (
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/sign-in" exact element={<SignIn setToken={setToken} />} />
-          <Route path="/sign-up" exact element={<Form setToken={setToken} />} />
-          {/* <Route path="/my-account" exact element={<Dashborad />} /> */}
-          {/* <Route path="/my-account" exact element={<SignIn setToken={setToken} />} /> */}
-        </Routes>
-      </Router>
-    );
-  }
+  // if (!token) {
+  //   return (
+  //     <Router>
+  //       <Navbar />
+  //       <Routes>
+  //         <Route path="/" exact element={<Home />} />
+  //         <Route path="/sign-in" exact element={<SignIn setToken={setToken} />} />
+  //         <Route path="/sign-up" exact element={<Form setToken={setToken} />} />
+  //         <Route path="/my-account" exact element={<Dashborad />} />
+  //         {/* <Route path="/my-account" exact element={<SignIn setToken={setToken} />} /> */}
+  //       </Routes>
+  //     </Router>
+  //   );
+  // }
 
   return (
     <Router>
-      <TokenNavbar />
+      {/* <TokenNavbar /> */}
       <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="/sign-in" exact element={<Home />} />
-        <Route path="/sign-up" exact element={<Home />} />
+        <Route path="/" exact element={<Dashborad />} />
+        <Route path="/sign-in" exact element={<Dashborad />} />
+        <Route path="/sign-up" exact element={<Dashborad />} />
         <Route path="/my-account" exact element={<Dashborad />} />
       </Routes>
     </Router>

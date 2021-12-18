@@ -1,7 +1,8 @@
 .sidebar{
     height: 100vh;
-    width: 250px;
+    width: 15%;
     background-color: black;
+    display: inline-block;
 }
 
 .sidebar-list{
@@ -28,6 +29,13 @@
     background-color: #a8a8a8;
     color: black;
 }
+
+.sidebar-list #active {
+    cursor: pointer;
+    background-color: #a8a8a8;
+    color: black;
+}
+
 .row #icon {
     flex:30%;
     display: grid;
@@ -37,3 +45,14 @@
 .row #title {
     flex: 70%;
 }
+
+.color-text {
+    color: #a8a8a8;
+}
+
+.side-nav-logo {
+    color: #fff;
+    flex-grow: 1;
+    text-align: center;
+}
+
