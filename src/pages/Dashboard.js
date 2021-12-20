@@ -2,22 +2,24 @@ import React, { useState } from "react";
 import SideBar from "../components/Sidenav/SideBar";
 import "./dashboard.css";
 import OverviewPage from "./Overview";
+import FamilyTree from "./FamilyTree";
+import ManageAccount from "./ManageAccount";
 
 const DashboardContent = (Page) => {
   if (Page === "overview") {
     return (
-      <OverviewPage />
+      <OverviewPage name= "Yasser" />
     );
   } else if (Page === "family-tree") {
     return (
       <div className="dashboard-page">
-        <h1>Family Tree</h1>
+        <FamilyTree />
       </div>
     );
   } else if (Page === "manage-account") {
     return (
       <div className="dashboard-page">
-        <h1>Manage Account</h1>
+        <ManageAccount />
       </div>
     );
   } else if (Page === "log-out") {
@@ -29,7 +31,7 @@ const DashboardContent = (Page) => {
   } else {
     return (
       <div className="dashboard-page">
-        <OverviewPage />
+        <OverviewPage name= "Yasser" />
       </div>
     );
   }

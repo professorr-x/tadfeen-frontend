@@ -2,10 +2,107 @@
     height: 100vh;
 }
 
+
 .logo-title{
     background: black;
 }
 
 .color-text {
     color: '#a8a8a8';
+}
+
+.dashboard-page{
+    display: inline-block;
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    background-color: #f2f2f2;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.MuiTable-root{
+    max-width: 100%;
+}
+
+/* .simple-table .MuiPaper-root{
+    width: 80%;
+    margin: 2%;
+} */
+
+.membership-summary-card{
+    margin: 2%;
+    max-width: 20%;
+    display: inline-block;
+}
+
+.family-summary-card{
+    margin: 2%;
+    max-width: 20%;
+    display: inline-block;
+}
+
+.greetings-message{
+    margin: 2%;
+}
+
+.greeting{
+    display: inline-block;
+}
+
+.payment-card{
+    width: 30%;
+    margin: 2%;
+    display: inline-block;
+}
+
+.family-card{
+    width: 30%;
+    margin: 2%;
+    display: inline-block;
+}
+
+/* .overview-head{
+    text-align: center;
+} */
+
+/* 
+CSS FOR FAMILY TREE PAGE */
+
+.family-tree-table{
+    /* text-align: center; */
+    margin: 2%;
+    margin-left: 5%;
+}
+
+/* .add-family-btn{
+    float: right;
+    display: block;
+    width: 50%;
+} */
+
+/* CSS FOR MANAGING ACCOUN */
+
+.address-update{
+    margin: 2%;
+}
+
+
+.email-update{
+    margin: 2%;
+    display: inline-block;
+}
+
+.password-update{
+    margin: 2%;
+    display: inline-block;
+}
+
+.address-input-field{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.email-input-field{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
